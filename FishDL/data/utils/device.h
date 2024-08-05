@@ -4,7 +4,7 @@
 namespace FishDL
 {
 
-namespace DeviceTag
+namespace DeviceTags
 {
     struct CPU;
     [[maybe_unused]] struct GPU;         // 或许没有用 

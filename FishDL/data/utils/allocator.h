@@ -13,7 +13,7 @@ template<typename TDevice>
 struct Allocator;
 
 template<>
-struct Allocator<DeviceTag::CPU>
+struct Allocator<DeviceTags::CPU>
 {
 private:
     struct AllocHelper
