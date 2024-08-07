@@ -1,5 +1,6 @@
 #include "traits.h"
 #include <FishDL/utils/helper.h>
+#include <FishDL/data/utils/category_tags.h>
 
 #include <cinttypes>
 #include <array>
