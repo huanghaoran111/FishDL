@@ -7,7 +7,6 @@
 template<typename T>
 using RemConstRef = std::remove_cv_t<std::remove_reference_t<T>>;
 
-
 // And
 template <bool cur, typename TNext>
 constexpr static bool AndValue = false;
