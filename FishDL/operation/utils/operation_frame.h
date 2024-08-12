@@ -5,13 +5,18 @@
 #include <FishDL/utils/traits.h>
 #include <FishDL/utils/cont_funcs/sequential.h>
 
+#include <type_traits>
+#include <cassert>
 namespace FishDL
 {
     namespace OpTags
     {
         struct Slice;
     }
-    template <typename... TOperands> struct OperandContainer;
+
+    // operator validation check
+    template<typename TOpTag, typename... TOperands>
+    constexpr bool IsValidOper = ((isValidCategoryTag<DataCategory<TOperands>>) && ...);
 
     template<typename TOpTag, typename TOperands,
              typename TPolicies = PolicyContainer<>>

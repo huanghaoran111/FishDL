@@ -2,7 +2,8 @@
 
 #include <type_traits>
 
-
+namespace FishDL
+{
 
 template<typename T>
 using RemConstRef = std::remove_cv_t<std::remove_reference_t<T>>;
@@ -24,3 +25,5 @@ constexpr static bool OrValue<false, TNext> = TNext::value;
 template <typename... T>
 constexpr static bool DependencyFalse = false;
 
+    
+}

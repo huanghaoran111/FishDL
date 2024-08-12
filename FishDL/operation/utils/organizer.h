@@ -2,11 +2,11 @@
 
 #include <FishDL/data/utils/traits.h>
 #include <FishDL/data/utils/shape.h>
-
+#include <FishDL/operation/utils/instance_id.h>
 
 namespace FishDL
 {
-
+    template <typename... TOperands> struct OperandContainer;
 
     // 运算输入参数的合法性(排除平凡类型)
     template<typename TOpTag, typename... TOperands>
@@ -45,7 +45,7 @@ namespace FishDL
     {};
 
     template<typename TOpTag, typename TPolicy, typename... TOprands>
-    using OperCateCal = typename OperCateGory_<TOpTag, TPolicy, DataCategory<TOperands>...>::type;
+    using OperCateCal = typename OperCategory_<TOpTag, TPolicy, DataCategory<TOperands>...>::type;
 
     // 用于保存运行期的额外参数
     template<typename TOpTag, typename TElem, typename TCate>
