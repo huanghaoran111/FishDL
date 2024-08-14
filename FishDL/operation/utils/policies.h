@@ -21,6 +21,6 @@ namespace FishDL
     {
         using MinorClass = DimPolicy::DimArrayValueCate;
         static constexpr std::array<std::size_t, sizeof...(uDims)> DimArray{uDims...};
-    };
+
 }
 #include <FishDL/policies/policy_macro_end.h>
